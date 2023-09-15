@@ -1,0 +1,8 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  web_api:
+    build: . # build the Docker image 
+    image: web_api
+    container_name: web_api_application
+    ports:
+      - "5000:80"

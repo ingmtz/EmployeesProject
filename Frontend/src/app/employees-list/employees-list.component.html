@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-6">
+        <h4 class="mb-4">Employees list</h4>
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-primary float-end" (click)="addEmployee()">Add employee</button>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Last name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.Id}}</td>
+                <td>{{employee.Name}}</td>
+                <td>{{employee.LastName}}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary" (click)="editEmployee(employee)">Editar</button>
+                    <button class="btn btn-sm btn-danger" (click)="deleteEmployee(employee)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
